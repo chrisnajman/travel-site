@@ -12,6 +12,9 @@
 node_modules/
 .tmp/
 
+# Added by CN
+*Copy.*
+
 # OS or Editor folders
 .DS_Store
 Thumbs.db
