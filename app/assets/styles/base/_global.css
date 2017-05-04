@@ -1,0 +1,27 @@
+html {
+	height:100%;
+	font-size:100%;
+	overflow-y:scroll;
+	/* this stuff should go in _cn-normalise.css */
+	/* don't forget to uninstall normalize package
+	and remove ref to it in style.css */
+}
+body {
+	font-family:"Roboto", sans-serif;
+	color:#333;
+
+}
+
+* { box-sizing: border-box; }
+
+img {
+	max-width:100%;
+	height:auto;
+}
+
+a {
+	color: $mainOrange;
+}
+
+
+

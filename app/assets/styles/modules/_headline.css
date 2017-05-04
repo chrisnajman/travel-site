@@ -1,0 +1,50 @@
+
+.headline {
+	font-weight: 300;
+	font-size: 23px;
+
+	@mixin mqSmall {
+		font-size: 46px;
+	}
+	color: $mainBlue;
+
+	&--centered {
+		text-align:center;
+	}
+
+	&--orange {
+		color: $mainOrange;
+	}
+
+	&--small {
+		font-size: 19px;
+
+		@mixin mqSmall {
+			font-size: 30px;
+		}
+
+	}
+
+	&--narrow {
+		max-width: 500px;
+		@mixin marginAuto;
+	}
+
+	&--light {
+		font-weight: 100;
+	}
+
+	/*Using ems means that margin-bottom will scale according to declared font-size*/
+	&--b-margin-small {
+		margin-bottom: .5em;
+	}
+
+	&--b-margin-large {
+		margin-bottom: 1.6em;
+	}
+
+	&--no-t-margin {
+		margin-top: 0;
+	}
+
+}

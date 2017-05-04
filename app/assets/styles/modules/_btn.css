@@ -1,0 +1,20 @@
+
+.btn {
+	background-color:$mainBlue;
+	color:#fff;
+	text-decoration:none;
+	padding: 13px 20px;
+	display:inline-block;
+
+	&--orange { 
+		background-color:$mainOrange;
+	}
+
+	&--large {
+		padding: 19px 33px;
+
+		@mixin mqSmall {
+			font-size:20px;
+		}
+	}
+}

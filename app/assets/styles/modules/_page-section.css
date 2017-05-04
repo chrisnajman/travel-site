@@ -1,0 +1,15 @@
+
+.page-section {
+
+	padding:19px 0;
+
+	@mixin mqMedium {
+		padding:72px 0;
+	}
+	
+
+	&--blue {
+		background-color: $mainBlue;
+		color:white;
+	}
+}
