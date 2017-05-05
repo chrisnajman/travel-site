@@ -16,5 +16,8 @@ don't download it as a dependency
 @import "modules/_headline";
 @import "modules/_row";
 @import "modules/_generic-content-container";
+@import "modules/_section-title";
+@import "modules/_feature-item";
+
 
 
