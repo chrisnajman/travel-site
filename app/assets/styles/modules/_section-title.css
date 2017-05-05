@@ -1,0 +1,26 @@
+.section-title {
+	font-size: 40px;
+	font-weight: 300;
+	text-align: center;
+
+	@mixin mqSmall {
+		font-size: 60px;
+	}
+
+	span { font-weight: 500; }
+
+	&__icon {
+		display: block;
+		@mixin marginAuto;
+		margin-bottom: 10px;
+
+		@mixin mqSmall {
+			display: inline-block;
+			margin-right: 8px;
+			margin-left: 0;
+
+		}
+
+		
+	}
+}

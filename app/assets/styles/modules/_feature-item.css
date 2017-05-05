@@ -1,0 +1,39 @@
+.feature-item {
+	
+	padding-bottom: 40px;
+	position: relative;
+
+	@mixin mqSmall {
+		padding-left: 94px;
+	}
+
+	&__icon {
+		display:block;
+		@mixin marginAuto;
+
+		@mixin mqSmall {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+	}
+
+	&__title {
+		font-size: 26px;
+		font-weight: 300;
+		margin-bottom: 12px;
+		margin-top: 11px;
+		text-align: center;
+
+		@mixin mqSmall {
+			font-size: 30px;
+			margin-top: 16px;
+			text-align: left;
+			
+		}
+
+
+
+	}
+}
