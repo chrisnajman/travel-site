@@ -5,13 +5,13 @@
 }
 
 @define-mixin mqMedium {
-	@media (min-width: 900px){
+	@media (min-width: 800px){
 		@mixin-content;
 	}
 }
 
 @define-mixin mqLarge {
-	@media (min-width: 1200px){
+	@media (min-width: 1010px){
 		@mixin-content;
 	}
 }
@@ -27,4 +27,8 @@
 		clear: both;
 		display: table;
 	}
+}
+
+@define-mixin circle {
+	border-radius: 50%;
 }

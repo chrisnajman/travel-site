@@ -1,0 +1,47 @@
+.testimonial {
+	background-color: rgba(255,255,255,0.8);
+	margin-bottom: 104px;
+	padding: 0 18px 1px 18px;
+
+	@mixin mqLarge {
+		padding: 0 30px 1px 30px;
+
+	}
+	/* 1px padding bottom allows paras inside container to express bottom margins */
+
+	&--last {
+
+		margin-bottom:0;
+
+		@mixin mqLarge {
+			margin-bottom: 104px;
+		}
+	}
+
+	&__image {
+		position: relative;
+		top: -86px;
+		display:block;
+		@mixin circle;
+		@mixin marginAuto;
+		margin-bottom: -86px;
+		border: 6px solid white;
+	}
+
+	&__title {
+		color: $mainBlue;
+		text-align: center;
+		font-size: 24px;
+		font-weight: 500;
+		margin: 0;
+	}
+
+	&__subtitle {
+		color: $mainOrange;
+		text-align: center;
+		font-size: 15px;
+		font-weight: 400;
+		margin: 4px 0 16px 0;		
+	}
+
+}
