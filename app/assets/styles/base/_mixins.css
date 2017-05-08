@@ -32,3 +32,9 @@
 @define-mixin circle {
 	border-radius: 50%;
 }
+
+@define-mixin textReplace {
+	text-indent: 100%;
+  	white-space: nowrap;
+  	overflow: hidden;	
+}

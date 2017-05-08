@@ -21,3 +21,5 @@ don't download it as a dependency
 @import "modules/_testimonial";
 @import "modules/_sprite";
 @import "modules/_site-footer";
+@import "modules/_site-header";
+@import "modules/_primary-nav";
