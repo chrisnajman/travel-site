@@ -659,7 +659,7 @@ a {
   }
 }
 
-.large-hero {
+.large-hero { 
 	position:relative;
 	border-bottom:0.625rem solid #2f5572;
 
@@ -799,7 +799,7 @@ a {
 @media (min-width: 1010px) {
 
   .page-section--testimonials {
-    background: url("/assets/images/testimonials-bg.jpg") top center no-repeat;
+    background: url("../../assets/images/testimonials-bg.jpg") top center no-repeat;
     background-size: cover;
   }
 }
@@ -1144,10 +1144,10 @@ a {
 }
 
 /* Don't edit modules/_sprite.css directly as it's generated automatically by Gulp. 
-Instead edit gulp/templates/sprite.css */
+Instead edit gulp/templates/sprite.css  */
 
 .icon { 
-		background-image: url('/assets/images/sprites/sprite-0f9283b3.svg'); 
+		background-image: url('../../assets/images/sprites/sprite-0f9283b3.svg'); 
 	}
 
 .icon--clear-view-escapes {

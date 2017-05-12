@@ -1,10 +1,10 @@
 /* Don't edit modules/_sprite.css directly as it's generated automatically by Gulp. 
-Instead edit gulp/templates/sprite.css */
+Instead edit gulp/templates/sprite.css  */
 
 {{#shapes}}
 	{{#first}}
 	.icon { 
-		background-image: url('/assets/images/sprites/{{{sprite}}}'); 
+		background-image: url('../../assets/images/sprites/{{{sprite}}}'); 
 	}
 	{{/first}}
 

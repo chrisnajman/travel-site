@@ -1,8 +1,8 @@
-@define-mixin mqSmall {
+@define-mixin mqSmall { 
 	@media (min-width: 600px){
 		@mixin-content;
 	}
-}
+} 
 
 @define-mixin mqMedium {
 	@media (min-width: 800px){
