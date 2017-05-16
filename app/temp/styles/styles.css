@@ -1262,6 +1262,11 @@ Instead edit gulp/templates/sprite.css  */
 
   .site-header {
     background: rgba(47,85,114, .3);
+    position: fixed;
+  }
+
+  .site-header--dark {
+    background-color: rgba(23, 51, 72, .85);
   }
 }
 
@@ -1276,10 +1281,14 @@ Instead edit gulp/templates/sprite.css  */
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%) scale(.8);
-          transform: translateX(-50%) scale(.8);
+  -webkit-transform: translateX(-50%) scale(0.8);
+          transform: translateX(-50%) scale(0.8);/* centres logo horizontally: */
   -webkit-transform-origin: 50% 0;
           transform-origin: 50% 0;
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out;
+  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
   background-color: #2f5572;
   padding: 1.5625rem 2.25rem;
 }
@@ -1287,9 +1296,14 @@ Instead edit gulp/templates/sprite.css  */
 @media (min-width: 800px) {
 
   .site-header__logo {
-    left: auto;
-    -webkit-transform: none;
-            transform: none;
+    left: auto;/* moves logo horizontally back to default left */
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  .site-header--dark .site-header__logo {
+    -webkit-transform: scale(0.58);
+            transform: scale(0.58);
   }
 }
 
@@ -1480,6 +1494,10 @@ Instead edit gulp/templates/sprite.css  */
     font-size: 1rem;
     padding: 0.8125rem 0;
     background-color: transparent;
+  }
+
+  .primary-nav a.is-current-link {
+    color: #fabb69;
   }
 }
 
