@@ -11319,23 +11319,31 @@ var StickyHeader = function () {
 		_classCallCheck(this, StickyHeader);
 
 		// Where all dom selection ($) takes place
+		// this.lazyImages = $(".lazyload");
 		this.siteHeader = (0, _jquery2.default)(".site-header");
 		this.headerTriggerElement = (0, _jquery2.default)(".large-hero__title");
 		this.createHeaderWaypoint();
 
 		this.pageSections = (0, _jquery2.default)(".page-section");
 		this.headerLinks = (0, _jquery2.default)(".primary-nav a");
-		this.topLinks = (0, _jquery2.default)(".top-link a");
+		// this.topLinks =$(".top-link a");
 		this.createPageSectionWaypoints();
 
 		this.addSmoothScrolling();
+		// this.refreshWayPoints();
 	}
+
+	// refreshWayPoints() {
+	// 	this.lazyImages.load(function(){
+	// 		Waypoint.refreshAll();
+	// 	});
+	// }
 
 	_createClass(StickyHeader, [{
 		key: "addSmoothScrolling",
 		value: function addSmoothScrolling() {
 			this.headerLinks.smoothScroll();
-			this.topLinks.smoothScroll();
+			// this.topLinks.smoothScroll();
 		}
 	}, {
 		key: "createHeaderWaypoint",

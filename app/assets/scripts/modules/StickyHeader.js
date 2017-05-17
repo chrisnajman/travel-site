@@ -5,21 +5,29 @@ class StickyHeader {
 	constructor() {
 
 		// Where all dom selection ($) takes place
+		// this.lazyImages = $(".lazyload");
 		this.siteHeader = $(".site-header");
 		this.headerTriggerElement = $(".large-hero__title");
 		this.createHeaderWaypoint();
 
 		this.pageSections = $(".page-section");
 		this.headerLinks =$(".primary-nav a");
-		this.topLinks =$(".top-link a");
+		// this.topLinks =$(".top-link a");
 		this.createPageSectionWaypoints();
 
 		this.addSmoothScrolling();
+		// this.refreshWayPoints();
 	}
+
+	// refreshWayPoints() {
+	// 	this.lazyImages.load(function(){
+	// 		Waypoint.refreshAll();
+	// 	});
+	// }
 
 	addSmoothScrolling() {
 		this.headerLinks.smoothScroll();
-		this.topLinks.smoothScroll();
+		// this.topLinks.smoothScroll();
 	}
 
 	createHeaderWaypoint(){
