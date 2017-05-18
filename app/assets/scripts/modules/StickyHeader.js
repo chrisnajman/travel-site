@@ -5,7 +5,7 @@ class StickyHeader {
 	constructor() {
 
 		// Where all dom selection ($) takes place
-		// this.lazyImages = $(".lazyload");
+		this.lazyImages = $(".lazyload");
 		this.siteHeader = $(".site-header");
 		this.headerTriggerElement = $(".large-hero__title");
 		this.createHeaderWaypoint();
@@ -16,14 +16,16 @@ class StickyHeader {
 		this.createPageSectionWaypoints();
 
 		this.addSmoothScrolling();
-		// this.refreshWayPoints();
+		this.refreshWayPoints();
 	}
 
-	// refreshWayPoints() {
-	// 	this.lazyImages.load(function(){
-	// 		Waypoint.refreshAll();
-	// 	});
-	// }
+	// This is to fix a conflict between Waypoints and Lazysizes
+	// Only required in this one file as Waypoint.refreshAll is global
+	refreshWayPoints() {
+		this.lazyImages.on('load', function() {
+			Waypoint.refreshAll();
+		});
+	}
 
 	addSmoothScrolling() {
 		this.headerLinks.smoothScroll();
