@@ -6,6 +6,11 @@ svg2png = require('gulp-svg2png');
 
 // Create the Sprite CSS file and name the sprite
 var config = {
+	shape: {
+		spacing: {
+			padding: 1
+		}
+	},
 	mode: {
 		css: {
 			variables: {

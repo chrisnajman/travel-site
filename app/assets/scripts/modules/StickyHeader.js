@@ -9,12 +9,9 @@ class StickyHeader {
 		this.siteHeader = $(".site-header");
 		this.headerTriggerElement = $(".large-hero__title");
 		this.createHeaderWaypoint();
-
 		this.pageSections = $(".page-section");
 		this.headerLinks =$(".primary-nav a");
-		// this.topLinks =$(".top-link a");
 		this.createPageSectionWaypoints();
-
 		this.addSmoothScrolling();
 		this.refreshWayPoints();
 	}
@@ -29,7 +26,6 @@ class StickyHeader {
 
 	addSmoothScrolling() {
 		this.headerLinks.smoothScroll();
-		// this.topLinks.smoothScroll();
 	}
 
 	createHeaderWaypoint(){

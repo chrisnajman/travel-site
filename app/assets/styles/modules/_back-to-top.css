@@ -1,0 +1,39 @@
+.back-to-top {
+	width: 40px;
+	height: 40px;
+	margin:10px 10px 10px 0;
+	padding: 10px;
+	@mixin circle;
+	float:right;
+	clear:both;
+	background-color: $mainOrange;
+	text-align: right;
+	transition: opacity .3s ease-out;
+	
+
+	&:hover {
+		opacity: .7;
+	}
+
+	span {
+		display: block;
+		width: 20px;
+		height: 20px;
+		@mixin textReplace;
+		background-size: cover;
+
+		.svg & {
+			background-image: url(../../assets/images/up-arrow.svg);
+		}
+
+		.no-svg & {
+			background-image: url(../../assets/images/up-arrow.png);
+		}
+
+	}
+
+	@mixin mqMedium {
+		margin: 0;
+	}
+
+}

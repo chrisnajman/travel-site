@@ -876,6 +876,13 @@ a {
   margin-top: 0;
 }
 
+.row {
+	
+
+	/* Begin equal height rules */
+
+}
+
 .row:after {
   content: "";
   clear: both;
@@ -974,18 +981,42 @@ a {
   }
 }
 
-/* Begin equal height rules */
+/* 
+		Syntax works like this:
+		========================
+
+		.class &--modifier-of-parent (.parent) outputs:
+		.class .parent--modifier-of-parent !!! :)
+		In this way you can get outside the parent class and come back in again.
+
+		Alternative method (trailing &):
+		================================
+
+		&--equal-height-at-large {
+			.flexbox & {
+				@mixin mqLarge {
+					display: flex;
+				}		
+
+				& > div {
+					float: none;
+					display: flex;
+				}
+			}
+		}
+
+	*/
 
 @media (min-width: 1010px) {
 
-  .row--equal-height-at-large {
+  .flexbox .row--equal-height-at-large {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.row--equal-height-at-large > div {
+.flexbox .row--equal-height-at-large > div {
   float: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1157,83 +1188,83 @@ a {
 Instead edit gulp/templates/sprite.css  */
 
 .icon { 
-		background-image: url('../../assets/images/sprites/sprite-0f9283b3.svg'); 
+		background-image: url('../../assets/images/sprites/sprite-8eb89099.svg'); 
 	}
 
 .no-svg .icon { 
-		background-image: url('../../assets/images/sprites/sprite-0f9283b3.png'); 
+		background-image: url('../../assets/images/sprites/sprite-8eb89099.png'); 
 	}
 
 .icon--clear-view-escapes {
-		width: 8.9rem;
-		height: 3.72063rem;
+		width: 9.025rem;
+		height: 3.84563rem;
 		background-position: 0 0;
 	}
 
 .icon--comment {
-		width: 4rem;
-		height: 4rem;
-		background-position: 99.70443349753694% 0;
+		width: 4.125rem;
+		height: 4.125rem;
+		background-position: 99.71014492753623% 0;
 	}
 
 .icon--facebook {
-		width: 1.32688rem;
-		height: 2.62563rem;
-		background-position: 26.040607071652357% 45.795830448496034%;
+		width: 1.45188rem;
+		height: 2.75063rem;
+		background-position: 26.424310365536293% 45.92133741323979%;
 	}
 
 .icon--fire {
-		width: 3.5rem;
-		height: 4rem;
-		background-position: 0 99.56481481481481%;
+		width: 3.625rem;
+		height: 4.125rem;
+		background-position: 0 99.58035714285714%;
 	}
 
 .icon--globe {
-		width: 4rem;
-		height: 4rem;
-		background-position: 27.586206896551722% 99.56481481481481%;
+		width: 4.125rem;
+		height: 4.125rem;
+		background-position: 28.019323671497585% 99.58035714285714%;
 	}
 
 .icon--instagram {
-		width: 2.62563rem;
-		height: 2.62563rem;
-		background-position: 63.2917018534157% 49.234556504346486%;
+		width: 2.75063rem;
+		height: 2.75063rem;
+		background-position: 63.059522249879905% 49.25740726919919%;
 	}
 
 .icon--mail {
-		width: 4rem;
-		height: 3rem;
-		background-position: 0 48.00806451612903%;
+		width: 4.125rem;
+		height: 3.125rem;
+		background-position: 0 48.0703125%;
 	}
 
 .icon--rain {
-		width: 4rem;
-		height: 4rem;
-		background-position: 99.70443349753694% 59.25925925925926%;
+		width: 4.125rem;
+		height: 4.125rem;
+		background-position: 99.71014492753623% 58.92857142857143%;
 	}
 
 .icon--star {
-		width: 4rem;
-		height: 4rem;
-		background-position: 59.11330049261084% 99.56481481481481%;
+		width: 4.125rem;
+		height: 4.125rem;
+		background-position: 59.90338164251208% 99.58035714285714%;
 	}
 
 .icon--twitter {
-		width: 3.23625rem;
-		height: 2.62875rem;
-		background-position: 94.04330452560171% 98.50700323226104%;
+		width: 3.36125rem;
+		height: 2.75375rem;
+		background-position: 94.15199343125627% 98.55159026429745%;
 	}
 
 .icon--wifi {
-		width: 3.75rem;
-		height: 4rem;
-		background-position: 68.79227053140097% 0;
+		width: 3.875rem;
+		height: 4.125rem;
+		background-position: 68.43601895734596% 0;
 	}
 
 .icon--youtube {
-		width: 2.17188rem;
-		height: 2.625rem;
-		background-position: 36.69752421959096% 45.792307692307695%;
+		width: 2.29688rem;
+		height: 2.75rem;
+		background-position: 37.76931216931217% 45.917910447761194%;
 	}
 
 .site-footer {
@@ -1295,8 +1326,8 @@ Instead edit gulp/templates/sprite.css  */
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%) scale(0.8);
-          transform: translateX(-50%) scale(0.8);/* centres logo horizontally: */
+  -webkit-transform: translateX(-50%) scale(.8);
+          transform: translateX(-50%) scale(.8);/* centres logo horizontally: */
   -webkit-transform-origin: 50% 0;
           transform-origin: 50% 0;
   -webkit-transition: -webkit-transform .3s ease-out;
@@ -1316,8 +1347,8 @@ Instead edit gulp/templates/sprite.css  */
   }
 
   .site-header--dark .site-header__logo {
-    -webkit-transform: scale(0.58);
-            transform: scale(0.58);
+    -webkit-transform: scale(0.57);
+            transform: scale(0.57);
   }
 }
 
@@ -1614,4 +1645,48 @@ Instead edit gulp/templates/sprite.css  */
   top: 50%;
   -webkit-transform: translate(-50%,-50%);
           transform: translate(-50%,-50%);
+}
+
+.back-to-top {
+	width: 2.5rem;
+	height: 2.5rem;
+	margin:0.625rem 0.625rem 0.625rem 0;
+	padding: 0.625rem;
+	border-radius: 50%;
+	float:right;
+	clear:both;
+	background-color: #d59541;
+	text-align: right;
+	-webkit-transition: opacity .3s ease-out;
+	transition: opacity .3s ease-out;
+
+}
+
+.back-to-top:hover {
+  opacity: .7;
+}
+
+.back-to-top span {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.svg .back-to-top span {
+  background-image: url(../../assets/images/up-arrow.svg);
+}
+
+.no-svg .back-to-top span {
+  background-image: url(../../assets/images/up-arrow.png);
+}
+
+@media (min-width: 800px) {
+
+  .back-to-top {
+    margin: 0;
+  }
 }

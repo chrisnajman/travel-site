@@ -94,8 +94,32 @@
 
 	/* Begin equal height rules */
 
-	&--equal-height-at-large {
+	/* 
+		Syntax works like this:
+		========================
 
+		.class &--modifier-of-parent (.parent) outputs:
+		.class .parent--modifier-of-parent !!! :)
+		In this way you can get outside the parent class and come back in again.
+
+		Alternative method (trailing &):
+		================================
+
+		&--equal-height-at-large {
+			.flexbox & {
+				@mixin mqLarge {
+					display: flex;
+				}		
+
+				& > div {
+					float: none;
+					display: flex;
+				}
+			}
+		}
+
+	*/
+	.flexbox &--equal-height-at-large {
 		@mixin mqLarge {
 			display: flex;
 		}		

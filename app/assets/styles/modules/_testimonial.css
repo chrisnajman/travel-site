@@ -5,7 +5,6 @@
 
 	@mixin mqLarge {
 		padding: 0 30px 1px 30px;
-
 	}
 	/* 1px padding bottom allows paras inside container to express bottom margins */
 
