@@ -11661,30 +11661,33 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var RevealOnScroll = function () {
-	function RevealOnScroll(els, offset) {
+	function RevealOnScroll(els, offset, animation) {
 		_classCallCheck(this, RevealOnScroll);
 
-		this.itemsToReveal = els;
+		this.itemsToAnimate = els;
 		this.offsetPercentage = offset;
+		this.animation = animation;
 		this.hideInitially();
+		// run the method hideInitially when the page loads
 		this.createWaypoints();
 	}
 
 	_createClass(RevealOnScroll, [{
-		key: "hideInitially",
+		key: 'hideInitially',
 		value: function hideInitially() {
-			this.itemsToReveal.addClass("reveal-item");
+			this.itemsToAnimate.addClass("reveal-item");
 		}
 	}, {
-		key: "createWaypoints",
+		key: 'createWaypoints',
 		value: function createWaypoints() {
 			var that = this;
-			this.itemsToReveal.each(function () {
+			var them = this;
+			this.itemsToAnimate.each(function () {
 				var currentItem = this;
 				new Waypoint({
 					element: currentItem,
 					handler: function handler() {
-						(0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
+						(0, _jquery2.default)(currentItem).addClass(them.animation, "reveal-item--is-visible");
 					},
 					offset: that.offsetPercentage
 				});
@@ -11852,9 +11855,9 @@ var _Modal2 = _interopRequireDefault(_Modal);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobMenu = new _MobileMenu2.default();
-new _RevealOnScroll2.default((0, _jquery2.default)(".feature-item"), "85%");
-new _RevealOnScroll2.default((0, _jquery2.default)(".testimonial"), "60%");
-new _RevealOnScroll2.default((0, _jquery2.default)(".back-to-top"), "75%");
+new _RevealOnScroll2.default((0, _jquery2.default)(".feature-item"), "85%", "animated fadeInDown");
+new _RevealOnScroll2.default((0, _jquery2.default)(".testimonial"), "60%", "animated fadeInDown");
+new _RevealOnScroll2.default((0, _jquery2.default)(".back-to-top"), "100%", "animated fadeInDown");
 var stickyHeader = new _StickyHeader2.default();
 var backToTop = new _BackToTop2.default();
 var modal = new _Modal2.default();
