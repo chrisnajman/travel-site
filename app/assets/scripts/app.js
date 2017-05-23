@@ -7,7 +7,7 @@ import Modal from "./modules/Modal";
 
 
 var mobMenu = new TheMobileMenu();
-new RevealOnScroll($(".our-beginning__main-heading"), "85%", "animated fadeInDown" );
+new RevealOnScroll($(".our-beginning__main-heading"), "85%", "animated hinge fadeInDown" );
 new RevealOnScroll($(".our-beginning__sub-heading"), "100%", "animated fadeInUp" );
 new RevealOnScroll($(".our-beginning__main-image"), "85%", "animated fadeInRight" );
 new RevealOnScroll($(".our-beginning__sub-image"), "85%", "animated fadeInLeft" );

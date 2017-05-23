@@ -10,6 +10,14 @@
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
+
+  &.infinite {
+    animation-iteration-count: infinite;
+  }
+
+  &.hinge {
+    animation-duration: 10s;
+  }
 }
 
 
