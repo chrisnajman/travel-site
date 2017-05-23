@@ -11855,8 +11855,13 @@ var _Modal2 = _interopRequireDefault(_Modal);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobMenu = new _MobileMenu2.default();
+new _RevealOnScroll2.default((0, _jquery2.default)(".our-beginning__main-heading"), "85%", "animated fadeInDown");
+new _RevealOnScroll2.default((0, _jquery2.default)(".our-beginning__sub-heading"), "100%", "animated fadeInUp");
+new _RevealOnScroll2.default((0, _jquery2.default)(".our-beginning__main-image"), "85%", "animated fadeInRight");
+new _RevealOnScroll2.default((0, _jquery2.default)(".our-beginning__sub-image"), "85%", "animated fadeInLeft");
+new _RevealOnScroll2.default((0, _jquery2.default)(".our-beginning__text"), "85%", "animated fadeInRight");
 new _RevealOnScroll2.default((0, _jquery2.default)(".feature-item"), "85%", "animated fadeInDown");
-new _RevealOnScroll2.default((0, _jquery2.default)(".testimonial"), "60%", "animated fadeInDown");
+new _RevealOnScroll2.default((0, _jquery2.default)(".testimonial"), "60%", "animated fadeInUp");
 new _RevealOnScroll2.default((0, _jquery2.default)(".back-to-top"), "100%", "animated fadeInDown");
 var stickyHeader = new _StickyHeader2.default();
 var backToTop = new _BackToTop2.default();
