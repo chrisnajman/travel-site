@@ -1,6 +1,8 @@
 
 .page-section {
 
+	background-color: white;
+
 	padding:19px 0;
 
 	@mixin mqMedium {

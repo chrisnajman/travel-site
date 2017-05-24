@@ -731,6 +731,13 @@ a {
 
 .large-hero__image {
   display:block;
+  opacity: .1;
+  -webkit-transition: opacity 2s ease-out;
+  transition: opacity 2s ease-out;
+}
+
+.large-hero__image--visible {
+  opacity: 1;
 }
 
 .wrapper {
@@ -780,6 +787,8 @@ a {
 }
 
 .page-section {
+
+	background-color: white;
 
 	padding:1.1875rem 0;
 }

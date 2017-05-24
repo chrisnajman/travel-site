@@ -53,6 +53,10 @@
 
 	&__image {
 		display:block;
+		opacity: .1;
+		transition: opacity 2s ease-out;		
+
+		&--visible { opacity: 1; }
 	}
 
 
