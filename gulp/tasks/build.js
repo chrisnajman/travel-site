@@ -30,7 +30,7 @@ gulp.task('deleteDistFolder', ['icons'], function() {
 gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
 	var pathsToCopy = [
 		'./app/**/*',
-		'!./app/index.html',
+		'!./app/**/*.html',
 		'!./app/assets/images/**',
 		'!./app/assets/styles/**',
 		'!./app/temp',
@@ -58,7 +58,7 @@ gulp.task('useminTrigger', ['deleteDistFolder'], function() {
 
 // process the comments in html file and move the required css and js files to dist
 gulp.task('usemin', ['styles', 'scripts'], function() {
-	return gulp.src('./app/index.html')
+	return gulp.src('./app/**/*.html')
 		.pipe(usemin({
 			css: [function() {return rev()}, function() { return cssnano()}],
 			js: [function() {return rev()}, function() {return uglify()}]
